@@ -10,9 +10,7 @@ Teste de Desenvolvimento para Metropole.GG
 -  MySQL
 
 # 💿 Instalação
-- Clone ou faça o download do repositório diretamente do github.
-  - Dentro do repositório temos uma pasta chamada **MySQL** lá se encontra o script de criação da *database* e *tables* e também inserção dos dados nas devidas tables.
-- Apague/recorte a pasta MySQL para outro local e copie a pasta raiz 'metropole-garage' para a pasta resources do seu servidor local.
+- Clone ou faça o download do repositório diretamente do github e extraia a pasta raiz **metropole-garage** para a pasta **resources** do seu servidor local.
 
 # 📠 Configuração do Banco de Dados
 Para utilização do banco de dados no script é necessário o *resource* do oxmysql, no qual pode ser baixado diretamente no site oficial do projeto.
@@ -20,6 +18,11 @@ A configuração do Banco de Dados é dado pelas configurações dentro do *serv
 ```
 start oxmysql
 set mysql_connection_string "mysql://user:password@host:port/metrogarage"
+```
+Dentro da pasta raiz, temos uma pasta chamada de **MySQL** e dentro dela temos o arquivo **database.sql**, ele é o arquivo que contém o script de criação da database/tables e também da inserção dos dados nas devidas tables.
+Na linha de insert da tabela *players* é necessário inserir a steamHex da pessoa que está a executar o script, para que os carros apareçam no */garagem*.
+```
+insert into players(steamHex) values ('steam:steamHex');
 ```
 
 # 📌 Como Utilizar
